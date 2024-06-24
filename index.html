@@ -3,12 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="color-scheme" content="dark" />
     <meta name="description" content="Arslan R. - Personal Page" />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
-    />
     <title>Arslan R.</title>
   </head>
   <body>
@@ -25,17 +20,30 @@
         than 30 million users.
       </p>
       <p>
-        This isn't just a page—it's a gateway to potential collaboration,
-        exciting job opportunities, and a showcase of my professional journey.
-        Reach out to explore how we can work together or to get a copy of my CV.
+        Reach out to me at
+        <a href="mailto:email@arslanr.com">email@arslanr.com</a> to explore how
+        we can work together or to request a copy of my CV.
       </p>
-      <p>Contact me at: <a href="mailto:me@arslanr.com">me@arslanr.com</a>.</p>
       <p>Best regards,<br />Arslan R.</p>
     </main>
     <style>
       html {
         font-family: serif;
         background-color: #0064e7; /* Dark blue background */
+      }
+
+      .container {
+        max-width: 960px;
+        padding: 1em;
+        margin: 0 auto;
+        font-size: 2em;
+        line-height: 1.25;
+      }
+
+      @media (max-width: 600px) {
+        .container {
+          font-size: 1.5em;
+        }
       }
 
       a {
@@ -48,9 +56,7 @@
       }
 
       p {
-        margin-top: 1em;
-        font-size: 1.5em;
-        line-height: 1.2;
+        margin-bottom: 1em;
         color: #c2f6fe; /* Light blue text */
       }
     </style>
