@@ -33,16 +33,29 @@
       }
 
       .container {
-        max-width: 960px;
         padding: 1em;
         margin: 0 auto;
-        font-size: 2em;
         line-height: 1.25;
+        font-size: 1.25em;
       }
 
-      @media (max-width: 600px) {
+      @media (min-width: 769px) and (max-width: 992px) {
         .container {
           font-size: 1.5em;
+        }
+      }
+
+      @media (min-width: 993px) and (max-width: 1200px) {
+        .container {
+          font-size: 1.75em;
+          max-width: 800px;
+        }
+      }
+
+      @media (min-width: 1201px) {
+        .container {
+          font-size: 2em;
+          max-width: 960px;
         }
       }
 
