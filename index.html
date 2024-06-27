@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dosis&family=EB+Garamond&family=Titillium+Web:wght@400;600&display=swap"
       rel="stylesheet"
     />
     <title>Arslan R.</title>
@@ -32,12 +32,7 @@
             hourly
           </li>
           <li>
-            Created a healthcare platform for over 2,000 clinics in the USA,
-            from 3D scanning to production and treatment monitoring
-          </li>
-          <li>
-            Optimized medical 3D scan processing, enabling real-time monitoring
-            access for doctors
+            Created a healthcare platform for over 2,000 clinics in the USA
           </li>
         </ul>
         <ul>
@@ -140,108 +135,134 @@
       </footer>
     </main>
     <style>
+      :root {
+        /* Typography */
+        --font-family: "EB Garamond", serif;
+        --font-size-base: 26px;
+        --line-height-base: 1.3;
+        --font-size-h1: 1.1rem;
+        --line-height-h1: 1.2;
+        --spacing: 1rem;
+
+        /* Colors */
+        --color-text: hsl(190, 100%, 90%);
+        --color-background: hsl(220, 100%, 45%);
+        --color-link: hsl(230, 100%, 90%);
+        --color-link-hover: white;
+        --color-hr-begin-and-end: var(--color-text);
+        --color-hr-middle: hsl(220, 100%, 60%);
+
+        /* Layout */
+        --container-max-width: 90%;
+      }
+
+      /* Base styles */
       html {
-        font-size: 26px;
-        font-family: "EB Garamond", serif;
-        margin: 0;
-        padding: 0;
-        color: hsl(218, 100%, 95%);
-        line-height: 1.25;
-      }
-
-      .container {
-        margin: 0 auto;
-      }
-
-      @media (max-width: 768px) {
-        .container {
-          max-width: 100%;
-          font-size: 24px;
-          padding: 0 16px;
-        }
-
-        h1 {
-          font-size: 26px;
-        }
-      }
-
-      @media (min-width: 769px) and (max-width: 992px) {
-        .container {
-          max-width: 760px;
-          font-size: 28px;
-        }
-
-        h1 {
-          font-size: 28px;
-        }
-      }
-
-      @media (min-width: 993px) and (max-width: 1200px) {
-        .container {
-          max-width: 900px;
-          font-size: 30px;
-        }
-
-        h1 {
-          font-size: 30px;
-        }
-      }
-
-      @media (min-width: 1201px) {
-        .container {
-          max-width: 1050px;
-          font-size: 34px;
-        }
-
-        h1 {
-          font-size: 34px;
-        }
+        font-size: var(--font-size-base);
+        font-family: var(--font-family);
+        line-height: var(--line-height-base);
+        color: var(--color-text);
+        background-color: var(--color-background);
+        font-weight: 400;
+        font-style: normal;
+        font-optical-sizing: auto;
       }
 
       body {
-        background: hsl(218, 100%, 35%);
+        margin: 0;
+        padding: 0;
       }
 
-      a {
-        text-decoration: underline;
-        color: hsl(218, 100%, 95%);
+      /* Typography */
+      h1 {
+        font-size: var(--font-size-h1);
+        line-height: var(--line-height-h1);
+        margin-bottom: var(--spacing);
       }
 
-      a:hover {
-        color: white;
-      }
-
-      strong {
-        font-weight: 600;
+      p {
+        margin-bottom: var(--spacing);
       }
 
       .tldr p {
-        text-align: start;
+        text-align: left;
       }
 
       .story p {
         text-align: justify;
       }
 
+      strong {
+        font-weight: 600;
+      }
+
+      /* Links */
+      a {
+        color: var(--color-link);
+        text-decoration: underline;
+        transition: color 0.3s ease;
+      }
+
+      a:hover,
+      a:focus {
+        color: var(--color-link-hover);
+      }
+
+      /* Lists */
       ul {
-        margin-left: 5px;
-        padding-left: 15px;
+        padding-left: 1rem;
+        margin-bottom: var(--spacing-unit);
       }
 
       li {
-        line-height: 1.25;
+        margin-bottom: calc(var(--spacing-unit) / 2);
       }
 
+      /* Horizontal rule */
       hr {
         border: 0;
         height: 2px;
-        background: hsl(218, 100%, 95%);
         background: linear-gradient(
           90deg,
-          hsl(218, 100%, 95%) 0%,
-          hsl(218, 100%, 75%) 50%,
-          hsl(218, 100%, 95%) 100%
+          var(--color-hr-begin-and-end) 0%,
+          var(--color-hr-middle) 50%,
+          var(--color-hr-begin-and-end) 100%
         );
+        margin: calc(var(--spacing-unit) * 2) 0;
+      }
+
+      /* Responsive styles */
+
+      .container {
+        margin: 0 auto;
+        max-width: var(--container-max-width);
+      }
+
+      @media (max-width: 899px) {
+        :root {
+          --font-size-base: 26px;
+        }
+      }
+
+      @media (min-width: 900px) and (max-width: 1024px) {
+        :root {
+          --font-size-base: 28px;
+          --container-max-width: 860px;
+        }
+      }
+
+      @media (min-width: 1025px) and (max-width: 1200px) {
+        :root {
+          --font-size-base: 30px;
+          --container-max-width: 960px;
+        }
+      }
+
+      @media (min-width: 1201px) {
+        :root {
+          --font-size-base: 34px;
+          --container-max-width: 1100px;
+        }
       }
     </style>
   </body>
