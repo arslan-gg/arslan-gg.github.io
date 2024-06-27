@@ -46,7 +46,7 @@
         </p>
 
         <hr />
-        
+
         <ul>
           <li>Go, Kotlin, Java, Python, JavaScript, TypeScript</li>
           <li>PostgreSQL, Redis, Apache Kafka, RabbitMQ</li>
@@ -55,7 +55,7 @@
       </section>
 
       <hr />
-      
+
       <section class="story">
         <p>
           Over the past 9 years, I've worked at major projects in fintech,
@@ -232,7 +232,6 @@
       /* Lists */
       ul {
         padding-left: 1rem;
-        margin-bottom: var(--spacing-ul);
       }
 
       li::marker {
@@ -242,6 +241,10 @@
       li {
         margin-bottom: var(--spacing-li);
         line-height: var(--line-height-li);
+      }
+
+      li:last-child {
+        margin-bottom: 0;
       }
 
       /* Horizontal rule */
@@ -280,7 +283,7 @@
       @media (min-width: 1201px) {
         :root {
           --font-size-base: 32px;
-          --container-max-width: 1150px;
+          --container-max-width: 1200px;
         }
       }
     </style>
