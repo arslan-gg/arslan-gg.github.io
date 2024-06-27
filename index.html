@@ -41,8 +41,8 @@
           <li>AWS, Kubernetes, Docker, Sentry, OpenSearch</li>
         </ul>
         <p>
-          Ready to revolutionize your tech solutions? Let's connect:
-          <a href="mailto:hello@ArslanR.com">hello@ArslanR.com</a>
+          Ready to revolutionize your tech solutions? Let's connect at
+          <a href="mailto:hello@ArslanR.com">hello@ArslanR.com</a>!
         </p>
       </section>
 
@@ -150,12 +150,18 @@
         --spacing-ul: 1.5rem;
 
         /* Colors */
-        --color-text: hsl(190, 100%, 90%);
-        --color-background: hsl(215, 100%, 40%);
-        --color-link: hsl(230, 100%, 90%);
-        --color-link-hover: white;
-        --color-hr-begin-and-end: var(--color-text);
-        --color-hr-middle: hsl(220, 100%, 60%);
+        --light-color: hsl(35, 40%, 80%);
+        --dark-color: hsl(35, 40%, 10%);
+        --accent-color: hsl(110, 40%, 20%);
+        --accent-color-light: hsl(110, 40%, 40%);
+
+        --color-text: var(--dark-color);
+        --color-ul-marker: var(--accent-color);
+        --color-background: var(--light-color);
+        --color-link: var(--accent-color);
+        --color-link-hover: var(--accent-color-light);
+        --color-h1: var(--accent-color);
+        --color-hr: var(--accent-color);
 
         /* Layout */
         --container-max-width: 90%;
@@ -183,6 +189,7 @@
         font-weight: var(--font-weight-bold);
         line-height: var(--line-height-h1);
         margin-bottom: var(--spacing);
+        color: var(--color-h1);
       }
 
       p {
@@ -219,6 +226,10 @@
         margin-bottom: var(--spacing-ul);
       }
 
+      li::marker {
+        color: var(--color-ul-marker);
+      }
+
       li {
         margin-bottom: var(--spacing-li);
         line-height: var(--line-height-li);
@@ -227,13 +238,8 @@
       /* Horizontal rule */
       hr {
         border: 0;
-        height: 2px;
-        background: linear-gradient(
-          90deg,
-          var(--color-hr-begin-and-end) 0%,
-          var(--color-hr-middle) 50%,
-          var(--color-hr-begin-and-end) 100%
-        );
+        height: 4px;
+        background: var(--color-hr);
         margin: var(--spacing) 0;
       }
 
